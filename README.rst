@@ -46,9 +46,9 @@ How to use
         loader = data.DataLoader(dataset, batch_size=32, shuffle=True)
         for samples, instrument_family_target, instrument_source_target, targets \
             in loader:
-        print(samples.shape, instrument_family_target.shape,
-              instrument_source_target.shape)
-        print(torch.min(samples), torch.max(samples))
+                print(samples.shape, instrument_family_target.shape,
+                      instrument_source_target.shape)
+                print(torch.min(samples), torch.max(samples))
 
 Credits
 -------
