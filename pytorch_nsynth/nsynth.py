@@ -1,3 +1,12 @@
+"""
+File: nsynth.py
+Author: Kwon-Young Choi
+Email: kwon-young.choi@hotmail.fr
+Date: 2018-11-13
+Description: Load NSynth dataset using pytorch Dataset.
+If you want to modify the output of the dataset, use the transform
+and target_transform callbacks as ususal.
+"""
 import os
 import json
 import glob
