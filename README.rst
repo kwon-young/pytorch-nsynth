@@ -34,15 +34,19 @@ How to use
 
 .. code:: python
 
+        import torch.utils.data as data
+        import torchvision.transforms as transforms
+        from pytorch_nsynth.nsynth import NSynth
+
         # audio samples are loaded as an int16 numpy array
         # rescale intensity range as float [-1, 1]
         toFloat = transforms.Lambda(lambda x: x / np.iinfo(np.int16).max)
         # use instrument_family and instrument_source as classification targets
         dataset = NSynth(
-        "../nsynth-test",
-        transform=toFloat,
-        blacklist_pattern=["string"],  # blacklist string instrument
-        categorical_field_list=["instrument_family", "instrument_source"])
+                "../nsynth-test",
+                transform=toFloat,
+                blacklist_pattern=["string"],  # blacklist string instrument
+                categorical_field_list=["instrument_family", "instrument_source"])
         loader = data.DataLoader(dataset, batch_size=32, shuffle=True)
         for samples, instrument_family_target, instrument_source_target, targets \
                         in loader:
