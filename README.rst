@@ -39,7 +39,7 @@ How to use
         toFloat = transforms.Lambda(lambda x: x / np.iinfo(np.int16).max)
         # use instrument_family and instrument_source as classification targets
         dataset = NSynth(
-        "data/nsynth-test",
+        "../nsynth-test",
         transform=toFloat,
         blacklist_pattern=["string"],  # blacklist string instrument
         categorical_field_list=["instrument_family", "instrument_source"])
