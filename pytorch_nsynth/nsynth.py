@@ -46,9 +46,13 @@ class NSynth(data.Dataset):
             tuple: (wav_data, json_data)
         """
         name = self.filenames[index]
-        _, wav_data = scipy.io.wavfile.read(name)
-        json_data = self.json_data[os.path.splitext(os.path.basename(name))[0]]
-        return wav_data, json_data
+        _, sample = scipy.io.wavfile.read(name)
+        target = self.json_data[os.path.splitext(os.path.basename(name))[0]]
+        if self.transform is not None:
+            sample = self.transform(sample)
+        if self.target_transform is not None:
+            target = self.target_transform(target)
+        return sample, target
 
 
 if __name__ == "__main__":
