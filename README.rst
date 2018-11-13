@@ -32,7 +32,8 @@ How to use
 * download tar.gz files from https://magenta.tensorflow.org/datasets/nsynth
 * unpack archive
 
-```python
+.. code:: python
+
 # audio samples are loaded as an int16 numpy array
 # rescale intensity range as float [-1, 1]
 toFloat = transforms.Lambda(lambda x: x / np.iinfo(np.int16).max)
@@ -48,7 +49,6 @@ for samples, instrument_family_target, instrument_source_target, targets \
 print(samples.shape, instrument_family_target.shape,
       instrument_source_target.shape)
 print(torch.min(samples), torch.max(samples))
-```
 
 Credits
 -------
