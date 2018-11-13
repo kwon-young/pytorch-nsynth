@@ -23,10 +23,21 @@ pytorch dataset for nsynth data
 * Documentation: https://pytorch-nsynth.readthedocs.io.
 
 
-Features
---------
+How to use
+----------
 
-* TODO
+For tensorflow:
+
+* install tensorflow
+* download tfrecord files from https://magenta.tensorflow.org/datasets/nsynth
+* use code in pytorch_nsynth/from_tfrecord.py
+
+For pytorch:
+
+* install pytorch, scipy
+* download tar.gz files from https://magenta.tensorflow.org/datasets/nsynth
+* unpack archive to data/
+* see code in pytorch_nsynth/nsynth.py for usage
 
 Credits
 -------
