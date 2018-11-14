@@ -27,7 +27,7 @@ How to use
 ----------
 
 * install pytorch, scipy
-* clone this repo: `git clone git@github.com:kwon-young/pytorch-nsynth.git`
+* clone this repo: `git clone https://github.com/kwon-young/pytorch-nsynth.git`
 * add module directory to `PYTHONPATH`: `export PYTHONPATH=pytorch-nsynth_dir:$PYTHONPATH`
 * download tar.gz files from https://magenta.tensorflow.org/datasets/nsynth
 * unpack archive
